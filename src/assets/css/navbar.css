@@ -1,0 +1,99 @@
+.askAnything{
+    color: #e3869c;
+    font-size: 19px;
+    
+}
+
+.askAnythingUnderline{
+  animation-name: myAnimationReverse;
+  animation-duration: 0.5s;
+  background-image: linear-gradient(#e3869c, #e3869c);
+  background-size: 28% 2px;           /* width 50%, height 2px */
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  box-decoration-break: clone;
+  padding-top: 16px;
+  padding-bottom: 16px; /* spacing from text */
+  transition: 4s ease; /* smooth slide */
+  
+}
+
+
+.askAnythingUnderline:hover{
+    animation-name: myAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes myAnimation {
+  0% {    background-size: 28% 2px;   
+      background-position: left bottom;
+}
+  45% {    background-size: 95% 2px; 
+        background-position: left bottom; /* 👈 aligns underline to end of text */
+} 
+  55%{
+         background-size: 95% 2px; 
+        background-position: right bottom; /* 👈 aligns underline to end of text */
+    }
+  100% {
+    background-size: 28% 2px;   
+    background-position: right bottom; /* 👈 aligns underline to end of text */
+}
+}
+
+@keyframes myAnimationReverse {
+  0% {    background-size: 28% 2px;   
+      background-position: right bottom;
+}
+  45% {    background-size: 95% 2px; 
+        background-position: right bottom; /* 👈 aligns underline to end of text */
+} 
+  55%{
+         background-size: 95% 2px; 
+        background-position: left bottom; /* 👈 aligns underline to end of text */
+    }
+  100% {
+    background-size: 28% 2px;   
+    background-position: left bottom; /* 👈 aligns underline to end of text */
+}
+}
+
+
+
+.mainPageYellowishDiv {
+   background-color: #fffaf0;
+    width: 100%;
+    height: 100vh;
+    top: -120%;
+    transition: top 0.7s ease; /* smooth slide */
+
+}
+
+/* Open menu */
+.mainPageYellowishDiv.open {
+  top: 0%;
+}
+
+/* Spacer for pushing content down */
+.menuSpacer {
+  height: 0;
+  transition: height 0.7s ease;
+}
+
+.menuSpacer.open {
+  height: 92vh; /* adjust to your menu height */
+}
+
+.navbarFooter {
+    
+  pointer-events: none;
+  transform: translateY(-100vh); /* move below viewport */
+  transition: opacity 0.7s ease, transform 0.7s ease;
+ }
+
+.navbarFooter.open{
+  pointer-events: auto;
+  transform: translateY(0); /* slide up into view */}
+
+
