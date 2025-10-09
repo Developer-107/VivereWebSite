@@ -80,7 +80,7 @@ export default function Scroller() {
           viewBox="0 0 12 54"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className={`mx-1.5 transition-transform duration-500 md:w-[140px] w-[14px] `}
+          className={`mx-1.5 transition-transform duration-500 md:w-[140px] w-[14px] `} 
         >
           <path
             d="M6 1L6 53 M1 48L6 53L11 48"
