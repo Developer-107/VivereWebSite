@@ -1,8 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import "../assets/css/navbar.css";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Footer() {
   const [fill, setFill] = useState(50); // start at 50%
+    const [showPinkOverlay, setShowPinkOverlay] = useState(false); // overlay state
+    const navigate = useNavigate();
+
+
   const targetRef = useRef(null);
 
 
@@ -26,8 +32,26 @@ export default function Footer() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+    const handleVacanciesClick = (e) => {
+    e.preventDefault(); // prevent immediate navigation
+    setShowPinkOverlay(true);
+    // Optional: Navigate after delay
+    setTimeout(() => {
+      navigate("/vacancies");
+    }, 700); // wait 0.5s so user sees the pink overlay
+  };
+
+
   return (
     <>
+    {/* Pink overlay */}
+      
+      <div
+        className={`fixed top-0 right-0 w-full h-full bg-[#cca7ab] z-50 transition-transform duration-700 ease-in-out ${
+          showPinkOverlay  ? "translate-x-0" : "translate-x-full"
+        }`}
+      ></div>
+
       <div id="ContactInfoId" className="grid grid-cols-12">
         <div 
             ref={targetRef}
@@ -104,6 +128,7 @@ export default function Footer() {
             </p>
             <a
               href="/vacancies"
+              onClick={handleVacanciesClick}
               className=" askAnything askAnythingUnderline mt-10 md:!text-[16px] !text-[14px]"
             >
               Our vacancies

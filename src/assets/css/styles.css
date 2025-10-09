@@ -76,3 +76,7 @@ h1, h2, h3 {
     transform: translateY(+7px);
   transition: transform 0.7s ease;
 }
+
+.vacanciesBg{
+  background: linear-gradient(to right,#cca7ab 5%,white 5%);
+}
