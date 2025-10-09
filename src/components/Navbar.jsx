@@ -178,9 +178,9 @@ export default function Navbar() {
           <div className="col-span-12 md:col-span-7">
             <p className="text-[17px] mb-0">Menu</p>
             <ul className="playFair mt-4 xl:mt-[4vh] xl:text-[5rem] md:text-[3rem] text-[2rem]">
-              <li onClick={() => {document.getElementById("OurStory")?.scrollIntoView({ behavior: "smooth" }), handleIsOpen()}} className="">The Story</li>
-              <li onClick={() => {document.getElementById("OurExpertiseId")?.scrollIntoView({ behavior: "smooth" }), handleIsOpen()}} className="">Our Expertise</li>
-              <li onClick={() => {document.getElementById("ContactInfoId")?.scrollIntoView({ behavior: "smooth" }), handleIsOpen()}} className="">Contact</li>
+              <li onClick={() => {document.getElementById("OurStory")?.scrollIntoView({ behavior: "smooth" }), handleIsOpen()}} className="cursor-pointer">The Story</li>
+              <li onClick={() => {document.getElementById("OurExpertiseId")?.scrollIntoView({ behavior: "smooth" }), handleIsOpen()}} className="cursor-pointer">Our Expertise</li>
+              <li onClick={() => {document.getElementById("ContactInfoId")?.scrollIntoView({ behavior: "smooth" }), handleIsOpen()}} className="cursor-pointer">Contact</li>
             </ul>
           </div>
           <div className="col-span-12 md:col-span-5 xl:mt-0">
