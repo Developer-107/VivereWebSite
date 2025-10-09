@@ -22,7 +22,7 @@ export default function Navbar() {
       setActiveIndex("expertise2");
     } else if (screenCount > 0.6268 && screenCount < 0.65) {
       setActiveIndex("expertise3");
-    } else if (screenCount > 0.7154 && screenCount < 0.73) {
+    } else if (screenCount > 0.7154 && screenCount < 0.75) {
       setActiveIndex("brandsWorkedFor");
     } else if (screenCount > 0.87655 && screenCount < 0.98) {
       setActiveIndex("letsConnect");
